@@ -1,0 +1,530 @@
+/* General Styling */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+.content {
+    flex: 1;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #2d3436;
+    color: white;
+    padding: 10px 0;
+}
+.navbar .nav-link {
+    color: white;
+    font-weight: bold;
+}
+.navbar .nav-link:hover {
+    color: #ff6f61;
+}
+.navbar .navbar-brand img {
+    max-width: 120px;
+}
+
+/* Product Container */
+.product-container {
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+.product-image img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e63946;
+}
+.buy-button {
+    background-color: #e63946;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+.buy-button:hover {
+    background-color: #cf502d;
+}
+
+/* Product Features Section */
+.features {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+}
+.features h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.features ul {
+    list-style-type: none;
+    padding: 0;
+}
+.features ul li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px;
+}
+.features ul li::before {
+    content: '\2022';
+    color: #2a9d8f;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Carousel Section */
+.carousel-inner img {
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+.carousel-inner img:hover {
+    transform: scale(1.05);
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #2d3436;
+}
+
+/* Social Navigation Section */
+.social-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: auto; 
+}
+.social-nav a {
+    color: #555;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+.social-nav a:hover {
+    color: #007bff;
+}
+
+/* Color Options */
+.color-options img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+.color-options img.selected {
+    border-color: #e63946;
+}
+.color-options img:hover {
+    opacity: 0.8;
+}
+
+/* Size Buttons */
+.size-btn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Product Reviews Section */
+.reviews-section {
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 40px;
+    background-color: #f9f9f9;
+}
+.review {
+    border-bottom: 1px solid #db1e1e;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.review:last-child {
+    border-bottom: none;
+}
+.review .stars {
+    color: #ffcc00;
+}
+.review .username {
+    font-weight: bold;
+    margin-right: 10px;
+}
+.review .date {
+    color: #999;
+    font-size: 14px;
+}
+.review .text {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Make the page responsive */
+@media (max-width: 768px) {
+    .product-container {
+        padding: 10px;
+        margin: 10px;
+    }
+    .product-details h1 {
+        font-size: 24px;
+    }
+    .buy-button {
+        width: 100%;
+        padding: 15px;
+    }
+    .carousel-inner img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-image img {
+        max-width: 80%;
+    }
+    .navbar .navbar-brand img {
+        max-width: 90px;
+    }
+}
+
+/* Footer Styling */
+.footer {
+    background: #10182F;
+    border-radius: 6px;
+    color: #fff;
+    padding: 60px;
+}
+.footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3.5rem;
+}
+.footer-row .footer-col h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.footer-col .links {
+    margin-top: 20px;
+}
+.footer-col .links li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+.footer-col .links li a {
+    text-decoration: none;
+    color: #bfbfbf;
+}
+.footer-col .links li a:hover {
+    color: #fff;
+}
+.footer-col p {
+    margin: 20px 0;
+    color: #bfbfbf;
+    max-width: 300px;
+}
+.footer-col form {
+    display: flex;
+    gap: 5px;
+}
+.footer-col input {
+    height: 40px;
+    border-radius: 6px;
+    background: none;
+    width: 100%;
+    outline: none;
+    border: 1px solid #7489C6;
+    caret-color: #fff;
+    color: #fff;
+    padding-left: 10px;
+}
+.footer-col input::placeholder {
+    color: #ccc;
+}
+.footer-col form button {
+    background: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+.footer-col form button:hover {
+    background: #cecccc;
+}
+.footer-col .icons {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+    cursor: pointer;
+}
+.footer-col .icons i {
+    color: #afb6c7;
+}
+.footer-col .icons i:hover {
+    color: #fff;
+}
+
+/* Main Product Image Styling */
+#main-image {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+    height: auto;
+}
+#main-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional Images Styling */
+.additional-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.additional-images .img-thumbnail {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+.additional-images .img-thumbnail:hover {
+    transform: scale(1.1);
+    border-color: #007bff;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* Restored Styling */
+.restored {
+    border: 2px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* General Section Styling */
+.features-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaf5ff; /* خلفة زرقاء فاتحة */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Individual Feature Box */
+  .feature {
+    flex: 1;
+    text-align: center;
+    padding: 0 15px;
+    max-width: 250px;
+  }
+  
+  .feature i {
+    font-size: 30px;
+    color: #007bff; /* أزرق */
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  
+  .feature h3 {
+    font-size: 16px;
+    color: #003f88; /* لون النص */
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .feature p {
+    font-size: 14px;
+    color: #000000; /* لون النص الرمادي */
+    line-height: 1.5;
+  }
+  
+  body {
+    font-family: 'Signika', sans-serif;
+ }
+ .bg-grey {
+    background: #000000;
+ }
+ .logo-footer {
+    margin-bottom: 40px;
+ }
+ footer {
+        color: rgb(255, 255, 255);
+ }
+ footer p, a {
+font-size: 12px;
+font-family: 'Roboto', sans-serif;
+}
+footer h6 {
+font-family: 'Playfair Display', serif;
+margin-bottom: 40px;
+position: relative;
+}
+footer h6:after {
+position: absolute;
+content: "";
+background: rgb(255, 255, 255);
+width: 12%;
+height: 1px;
+left: 0;
+bottom: -20px;
+}
+ .btn-footer {
+             color: rgb(255, 255, 255);
+          
+            text-decoration: none;
+            border: 1px solid;
+            border-radius: 43px;
+            font-size: 13px;
+            padding: 7px 30px;
+            line-height: 47px;
+ }
+ .btn-footer:hover {
+            
+            text-decoration: none;
+           
+ }
+.form-footer input[type="text"] {
+    border: none;
+border-radius: 16px 0 0 16px;
+outline: none;
+padding-left: 10px;
+
+}
+::placeholder {
+font-size: 10px;
+padding-left: 10px;
+font-style: italic;
+}
+.form-footer input[type="button"] {
+border: none;
+background:#000000;
+    margin-left: -5px;
+color: #fff;
+outline: none;
+border-radius: 0 16px 16px 0;
+padding: 2px 12px;
+}
+ .social .fa {
+color: rgb(217, 40, 40);
+font-size: 22px;
+padding: 10px 15px;
+
+}
+ footer ul li {
+list-style: none;
+display: block;
+}
+footer ul  {
+padding-left: 0;
+}
+footer ul  li a{
+text-decoration: none;
+color: rgb(255, 255, 255);
+text-decoration:none;
+}
+a:hover {
+text-decoration: none;
+color: #ffffff !important;
+
+}
+.logo-part {
+border-right: 1px solid rgb(255, 255, 255);
+height: 100%;
+}
+
+
+/* Add background style and center content */
+/* Add background style and center content */
+.discount-timer-container {
+    text-align: center;
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    color: #333; /* Dark text for contrast */
+    max-width: 300px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Style for the timer label text */
+.offer-text {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Style the timer itself */
+.discount-timer {
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f06; /* Bright background for timer */
+    color: white; /* White text for contrast */
+    border-radius: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for timer */
+.discount-timer:hover {
+    transform: scale(1.1);
+    background-color: #ff9800; /* Change to orange when hovered */
+}
+
+/* Style for the timer digits */
+.timer {
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for a digital feel */
+}
+
+/* Add animation to the timer */
+@keyframes timerAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
